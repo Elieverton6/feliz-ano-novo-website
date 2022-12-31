@@ -1,0 +1,134 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('./festa-ano-novo.jpeg');
+}
+
+.copyright {
+    font-family: 'Rubik', sans-serif;
+    border-top-left-radius: 1rem;
+    bottom: 0;
+    background-color: rgb(25, 158, 25);
+    padding: 1rem 0.7rem;
+    writing-mode: vertical-lr;
+    right: 0;
+    position: absolute;
+}
+
+.copyright p {
+    color: white;
+}
+
+.copyright img {
+    margin-top: 0.3rem;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.container {
+    animation-duration: 1s;
+    animation-name: anim-opacity;
+}
+
+.img-ano-novo-center {
+    padding-top: 1rem;
+    margin: 0 0 3rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-ano-novo-center img {
+    width: 100%;
+    margin: 0 1rem;
+    max-width: 250px;
+}
+
+.message-ano-novo-center {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+#name {
+    font-weight: 600;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+#message {
+    text-transform: capitalize !important;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.name-gradient {
+    animation-iteration-count: infinite;
+    animation-name: teste;
+    animation-duration: 1s;
+    background: linear-gradient(90deg, rgba(255,186,0,1) 40%, rgba(200,96,8,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes anim-opacity {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes teste {
+    0% {
+        filter: drop-shadow(0 0 0.5rem rgba(250, 174, 59, 0.300));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 0.5rem rgba(250, 246, 0, 0.500));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0.5rem rgba(250, 174, 59, 0.300));
+    }
+}
+
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 450px) {
+    #name {
+        font-size: 1.1rem;
+    }
+
+    #message {
+        font-size: 1rem;
+    }
+}
